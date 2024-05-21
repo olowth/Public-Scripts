@@ -1,0 +1,1 @@
+﻿$stoppedServices = (Get-WmiObject Win32_Service -ComputerName $server | Where-Object {$_.StartMode -eq 'Auto' -and $_.State -ne "Running"}).Name
